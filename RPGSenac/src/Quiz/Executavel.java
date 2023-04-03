@@ -11,13 +11,27 @@ public class Executavel {
     	Scanner scanner = new Scanner(System.in);
 		int opcao;
 		/*COLOCAR LÓGICA DE TENTATIVAS MAIS TARDE!!*/
-		List<String> users = new ArrayList<String>();
+
 		List<Integer> scores = new ArrayList<Integer>();
-		List<String> persons = new ArrayList<String>();
+		List<String> nivel = new ArrayList<String>();
+		ArrayList<String> users = new ArrayList<String>();
+
 		
-		users.add("Pedro");
-		users.add("Joao");
-	
+        System.out.println("Quantos usuários deseja adicionar?");
+        int quantidade = scanner.nextInt();
+        scanner.nextLine(); // limpar o buffer do scanner
+
+        for (int i = 1; i <= quantidade; i++) {
+            System.out.println("Digite o nome do usuário " + i + ":");
+            String nome = scanner.nextLine();
+            users.add(nome);
+            System.out.println("Usuário " + nome + " adicionado à lista!");
+        }
+
+        System.out.println("Lista de usuários: " + users);
+		
+		
+		
 		
 		for(String people : users) {
 			do {
@@ -41,6 +55,7 @@ public class Executavel {
 						System.out.println("Rodada do Jogador: " + people);
 						Jogar jogar = new Jogar();
 						scores.add(jogar.jogar());
+						System.out.println("Sua Rodada foi Finalizada ! ");
 						break;
 					}
 					case 3: {
@@ -51,21 +66,28 @@ public class Executavel {
 				}
 			} while (opcao != 4);
 		}
-			System.out.println("Opcao: Sair");
-			System.out.println("Poxa, voce escolheu sair do jogo");
+			System.out.println("Poxa, você escolheu sair do jogo");
 			
 			for(int i = 0; i < users.size(); i++) {
-				if(scores.get(i) < 3) {
-					persons.add("Capitão América");
-				}else {
-					persons.add("Home de Ferro");
+				if(scores.get(i) > 10) {
+					nivel.add("Especialista");
 				}
 				
-				System.out.println(users.get(i) + ", você obteve: " + scores.get(i) + ", Personagem: " + persons.get(i));
+				else if(scores.get(i) >= 8) {
+					nivel.add("Monstro Sagrado");
+				}
+				else if(scores.get(i) >= 5) {
+					nivel.add("Regular");
+				}
+				else if(scores.get(i) >= 3 ){
+					nivel.add("ruim");
+				}
+				else {
+					nivel.add("péssimo slc");
+				}
+				
+				System.out.println(users.get(i) + ", você obteve: " + scores.get(i) + ", você é " + nivel.get(i) + " em Marvel");
 					
 			}
-		
-
     }
-
 }
