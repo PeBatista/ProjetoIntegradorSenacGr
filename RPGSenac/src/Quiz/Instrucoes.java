@@ -36,12 +36,12 @@ public class Instrucoes {
 		System.out.println("Lista de usuários: [João, Maria]");
 		Load(2500);
 		System.out.println("+===================+\r\n"
-				+ "| Menu do Jogo |\r\n"
+				+ "| Menu do Jogo      |\r\n"
 				+ "+===================+\r\n"
-				+ "| 1. Instruções |\r\n"
-				+ "| 2. Jogar |\r\n"
-				+ "| 3. Créditos |\r\n"
-				+ "| 4. Sair |\r\n"
+				+ "| 1. Instruções     |\r\n"
+				+ "| 2. Jogar          |\r\n"
+				+ "| 3. Créditos       |\r\n"
+				+ "| 4. Sair           |\r\n"
 				+ "+===================+");
 		Load(1200);
 		System.out.println("Selecione sua opção!");

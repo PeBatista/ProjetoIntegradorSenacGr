@@ -68,7 +68,7 @@ public class Executavel {
 				}
 				case 3: {
 					System.out.println("DESENVOLVIDO POR: [PEDRO BATISTA MENDONÇA] [JOÃO VICTOR TRINDADE VIEIRA]");
-					System.out.println("[DAVI LOPES] [JULIA]");
+					System.out.println("[DAVI LOPES] [JULIA GOMES DE SOUZA] [BEATRIZ BEZERRA DE ALMEIDA]");
 					System.out.println("/*/*/**/*/*/*/*/*/*/*");
 					System.out.println("Todos os direitos reservados");
 					Load(2000);
@@ -97,7 +97,7 @@ public class Executavel {
 			}
 
 			System.out.println(
-					users.get(i) + ", você obteve: " + scores.get(i) + ", você é " + nivel.get(i) + " em Marvel");
+					users.get(i) + ", você obteve: " + scores.get(i) + ", você é " + nivel.get(i) + ", quando o assunto é sobre Marvel");
 
 		}
 
