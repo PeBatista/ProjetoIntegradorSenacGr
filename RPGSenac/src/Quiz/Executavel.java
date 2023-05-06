@@ -1,6 +1,7 @@
 package Quiz;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -98,11 +99,26 @@ public class Executavel {
 
 			System.out.println(
 					users.get(i) + ", você obteve: " + scores.get(i) + ", você é " + nivel.get(i) + ", quando o assunto é sobre Marvel");
+		
+		}
+		
+		List<String> ranking = new ArrayList<String>();
+		List<Integer> sortedScores = new ArrayList<Integer>(scores); // criar uma cópia da lista de scores para ordenar
+		Collections.sort(sortedScores, Collections.reverseOrder()); // ordenar a lista de scores em ordem decrescente
 
+		for (int t = 0; t < users.size(); t++) {
+		    int posicao = sortedScores.indexOf(scores.get(t)) + 1; // encontrar a posição do score na lista ordenada
+		    String colocacao = posicao == 1 ? "Primeiro Lugar" : posicao + "º Lugar"; // verificar a colocação do usuário
+		    ranking.add("Usuário: " + users.get(t) + ", " + colocacao + ", Pontuação: " + scores.get(t));
+		}
+
+		// exibir ranking
+		for (String colocacao : ranking) {
+		    System.out.println(colocacao);
 		}
 
 	}
-
+	
 	public long tempo;
 
 	public static void Load(Integer tempo) {
